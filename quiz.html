@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Choice Quiz</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Multiple Choice Quiz</h1>
+        <p>Please select the best answer for each question.</p>
+
+        <form id="quiz-form" onsubmit="showFinalScore(event)">
+            <div class="question-container" id="question1">
+                <div class="question">What is the capital of France?</div>
+                <ul class="options">
+                    <li><label><input type="radio" name="q1" value="London"> London</label></li>
+                    <li><label><input type="radio" name="q1" value="Berlin"> Berlin</label></li>
+                    <li><label><input type="radio" name="q1" value="Paris"> Paris</label></li>
+                    <li><label><input type="radio" name="q1" value="Rome"> Rome</label></li>
+                </ul>
+                <button type="button" class="nav-button next" onclick="showNextQuestion(1)">Next ➡️</button>
+            </div>
+
+            <div class="question-container" id="question2">
+                <div class="question">Who painted the Mona Lisa?</div>
+                <ul class="options">
+                    <li><label><input type="radio" name="q2" value="Michelangelo"> Michelangelo</label></li>
+                    <li><label><input type="radio" name="q2" value="Leonardo da Vinci"> Leonardo da Vinci</label></li>
+                    <li><label><input type="radio" name="q2" value="Vincent van Gogh"> Vincent van Gogh</label></li>
+                    <li><label><input type="radio" name="q2" value="Pablo Picasso"> Pablo Picasso</label></li>
+                </ul>
+                <button type="button" class="nav-button prev" onclick="showPreviousQuestion(2)">⬅️ Previous</button>
+                <button type="button" class="nav-button next" onclick="showNextQuestion(2)">Next ➡️</button>
+            </div>
+
+            <div class="question-container" id="question3">
+                <div class="question">What is the highest mountain in the world?</div>
+                <ul class="options">
+                    <li><label><input type="radio" name="q3" value="Mount Everest"> Mount Everest</label></li>
+                    <li><label><input type="radio" name="q3" value="K2"> K2</label></li>
+                    <li><label><input type="radio" name="q3" value="Kangchenjunga"> Kangchenjunga</label></li>
+                    <li><label><input type="radio" name="q3" value="Lhotse"> Lhotse</label></li>
+                </ul>
+                <button type="button" class="nav-button prev" onclick="showPreviousQuestion(3)">⬅️ Previous</button>
+                <button type="submit" class="submit-button">Submit Quiz</button>
+            </div>
+
+            <div id="final-score" class="final-score-container">
+                <h2>Your Score: <span id="score"></span></h2>
+                <h3>Percentage: <span id="percentage"></span>%</h3>
+            </div>
+        </form>
+    </div>
+    <div class="disclaimer">This is a prototype and subject to change</div>
+    <script src="script.js"></script>
+</body>
+</html>
