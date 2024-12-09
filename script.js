@@ -6,6 +6,11 @@ const correctAnswers = {
     q2: 'Leonardo da Vinci',
     q3: 'Mount Everest'
 };
+const answerReasons = {
+    q1: 'Paris is the capital of France.',
+    q2: 'Leonardo da Vinci painted the Mona Lisa.',
+    q3: 'Mount Everest is the highest mountain in the world.'
+};
 
 function showNextQuestion(current) {
     const currentElem = document.getElementById(`question${current}`);
@@ -49,13 +54,17 @@ function checkAnswer(event) {
         createParticles(event.pageX, event.pageY, 'red');
     }
 
-    setTimeout(() => {
-        if (currentQuestion < totalQuestions) {
-            showNextQuestion(currentQuestion);
-        } else {
-            showFinalScore();
-        }
-    }, 1000);
+    // Disable all options after one has been selected
+    document.querySelectorAll(`input[name="${question}"]`).forEach(input => {
+        input.disabled = true;
+    });
+
+    // Show the reason for the correct answer
+    const reasonElem = document.createElement('div');
+    reasonElem.textContent = answerReasons[question];
+    reasonElem.style.marginTop = '20px';
+    reasonElem.classList.add('answer-reason');
+    selectedOption.parentElement.parentElement.appendChild(reasonElem);
 }
 
 function createParticles(x, y, color) {
