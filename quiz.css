@@ -127,3 +127,106 @@ body {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.5);
 }
+
+#score-counter {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+#config-button {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#config-button:hover {
+    transform: rotate(90deg);
+}
+
+#config-panel {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    max-width: 400px; /* Increase the width to accommodate input fields */
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: bottom 0.5s ease;
+    overflow-y: auto; /* Add scroll if content exceeds panel height */
+}
+
+#config-panel.open {
+    bottom: 0;
+}
+
+#config-panel h2 {
+    margin-top: 0;
+}
+
+#config-panel input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #333;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding doesn't exceed container width */
+}
+
+#config-panel button {
+    width: 100%;
+    padding: 10px;
+    background-color: #555;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#config-panel button:hover {
+    background-color: #777;
+}
+
+#config-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#config-close-button:hover {
+    color: #aaa;
+}
+
+/* Adjust navigation buttons inside question-container */
+.question-container .nav-button {
+    position: static;
+    top: auto;
+    transform: none;
+    margin: 20px 5px;
+}
+
+/* Adjust submit button positioning */
+.question-container .submit-button {
+    display: block;
+    margin: 20px auto;
+}

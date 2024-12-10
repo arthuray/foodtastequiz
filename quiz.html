@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="quiz.css">
 </head>
 <body>
+    <div id="score-counter">Score: 0</div>
     <div class="quiz-container">
         <h1>Multiple Choice Quiz</h1>
         <p>Please select the best answer for each question.</p>
@@ -53,6 +54,35 @@
             </div>
     </div>
     <div class="disclaimer">This is a prototype and subject to change</div>
+    
+    <!-- Config Button -->
+    <button id="config-button" onclick="toggleConfigPanel()">⚙️</button>
+
+    <!-- Config Panel -->
+    <div id="config-panel">
+        <!-- Close Button -->
+        <button id="config-close-button" onclick="toggleConfigPanel()">✖️</button>
+        <form id="login-form" onsubmit="authenticate(event)">
+            <h2>Admin Login</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="config-content" style="display: none;">
+            <h2>Add New Question</h2>
+            <input type="text" id="new-question-text" placeholder="Question" required>
+            <!-- Input fields for options -->
+            <input type="text" id="new-option1" placeholder="Option 1" required>
+            <input type="text" id="new-option2" placeholder="Option 2" required>
+            <input type="text" id="new-option3" placeholder="Option 3" required>
+            <input type="text" id="new-option4" placeholder="Option 4" required>
+            <input type="text" id="new-question-answer" placeholder="Correct Answer" required>
+            <input type="text" id="new-question-reason" placeholder="Answer Explanation" required>
+            <button onclick="addNewQuestion()">Add Question</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
