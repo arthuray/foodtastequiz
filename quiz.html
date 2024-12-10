@@ -44,14 +44,13 @@
                     <li><label><input type="radio" name="q3" value="Lhotse"> Lhotse</label></li>
                 </ul>
                 <button type="button" class="nav-button prev" onclick="showPreviousQuestion(3)">⬅️ Previous</button>
-                <button type="submit" class="submit-button">Submit Quiz</button>
+                <button type="submit" class="submit-button" onclick="showFinalScore">Submit Quiz</button>
             </div>
-
+        </form>
             <div id="final-score" class="final-score-container">
                 <h2>Your Score: <span id="score"></span></h2>
                 <h3>Percentage: <span id="percentage"></span>%</h3>
             </div>
-        </form>
     </div>
     <div class="disclaimer">This is a prototype and subject to change</div>
     <script src="script.js"></script>
