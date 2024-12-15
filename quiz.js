@@ -66,9 +66,14 @@ function sort(a) {
 function loadQuestion() {
     const questionElement = document.getElementById("question");
     const optionsElement = document.getElementById("options");
+    const progressBar = document.getElementById("progress-bar");
 
     questionElement.textContent = questions[currentQuestion].question;
     optionsElement.innerHTML = "";
+
+    // Update Progress Bar
+    let progressPercentage = ((currentQuestion) / maxQuestion) * 100;
+    progressBar.style.width = `${progressPercentage}%`;
 
     questions[currentQuestion].options.forEach((option, index) => {
         var input = document.createElement('input');
@@ -76,47 +81,110 @@ function loadQuestion() {
         input.name = "123";
         input.value = option;
         input.setAttribute("id", option);
+        input.setAttribute("data-index", index + 1); // Add data-index for key mapping
+
         var label = document.createElement('label');
-        label.innerHTML = option;
+        label.innerHTML = option; // Remove manual numbering from innerHTML
         label.setAttribute("for", option);
+        label.setAttribute("data-number", index + 1); // Add data-number for styling
+
         optionsElement.appendChild(input);
         optionsElement.appendChild(label);
     });
     
 }
 
-function selectAnswer(selectedAnswer) {
+function selectAnswer() {
+    const selectedOption = document.querySelector('input[name="123"]:checked');
+    if (!selectedOption) {
+        // Removed the alert to prevent popup
+        return;
+    }
+    const selectedAnswer = selectedOption.value;
+
+    let resultText = "";
+    let emoji = "";
+
     if (selectedAnswer === questions[currentQuestion].correctAnswer) {
         score++;
-        document.getElementById("result").textContent = "答對了！做得好！";
+        emoji = "✅"; // Tick emoji for correct answer
+        resultText = `${emoji} 答對了！做得好！`;
     } else {
-        document.getElementById("result").textContent = "答錯了。" + questions[currentQuestion].explanation;
+        emoji = "❌"; // Cross emoji for incorrect answer
+        resultText = `${emoji} 答錯了。`;
     }
 
+    document.getElementById("result").textContent = resultText;
+
+    // Show the explanation with the emoji in the modal
+    const explanation = questions[currentQuestion].explanation;
+    document.getElementById("explanation-text").textContent = `${resultText} ${explanation}`;
+    openModal();
+}
+
+function openModal() {
+    document.getElementById("explanation-modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("explanation-modal").style.display = "none";
+    document.getElementById("result").textContent = "";
+
     currentQuestion++;
-    document.getElementById("qCorrect").textContent = `第 ${currentQuestion+1} 條題目，共 ${maxQuestion} 條。`;
     if (currentQuestion < maxQuestion) {
         loadQuestion();
+        document.getElementById("qCorrect").textContent = `第 ${currentQuestion + 1} 條題目，共 ${maxQuestion} 條。`;
     } else {
         document.getElementById("question").textContent = "";
         document.getElementById("options").textContent = "";
         document.getElementById("end").textContent = `遊戲結束！分數：${score}/${maxQuestion}`;
         document.getElementById("qCorrect").textContent = "";
+
+        // Update Progress Bar to 100%
+        const progressBar = document.getElementById("progress-bar");
+        progressBar.style.width = `100%`;
+
         document.getElementById("submit").textContent = "";
+        document.getElementById("restart").style.display = "block"; // Show restart button
     }
 }
 
+// Modify checkAnswer to correctly submit without relying on button focus
 function checkAnswer() {
-    const selectedOption = document.querySelector("button:focus");
-    if (selectedOption) {
-        selectAnswer(document.querySelector('input[name="123"]:checked').value);
-    } else {
-        alert("Please select an answer before submitting.");
-    }
+    selectAnswer();
+}
+
+function restartQuiz() {
+    score = 0;
+    currentQuestion = 0;
+    questions.sort(() => Math.random() - 0.5); // Shuffle questions again
+    document.getElementById("end").textContent = "";
+    document.getElementById("restart").style.display = "none";
+    document.getElementById("qCorrect").textContent = `第 ${currentQuestion + 1} 條題目，共 ${maxQuestion} 條。`;
+    loadQuestion();
+    document.getElementById("submit").innerHTML = '<button onclick="checkAnswer()">提交答案</button>'; // Restore submit button
 }
 
 for (let i = 0; i < questions.length; i++) {
     sort(questions[i].options);
-  }
+}
 
 loadQuestion();
+
+// Modify the keydown event listener to handle both number keys and "Enter"
+document.addEventListener('keydown', function(event) {
+    if (['1', '2', '3', '4'].includes(event.key)) {
+        const optionNumber = event.key;
+        const optionInput = document.querySelector(`input[data-index="${optionNumber}"]`);
+        if (optionInput) {
+            optionInput.click(); // Simulate a click to properly check the radio button
+        }
+    } else if (event.key === 'Enter') {
+        const modal = document.getElementById("explanation-modal");
+        if (modal.style.display === "block") {
+            closeModal();
+        } else {
+            checkAnswer();
+        }
+    }
+});

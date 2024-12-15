@@ -8,6 +8,10 @@
 </head>
 <body>
     <div class="quiz-container">
+        <!-- Progress Bar -->
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
         <h1>食物知多少？</h1>
         <div id="question"></div>
         <div id="options"></div>
@@ -17,9 +21,17 @@
         <br>
         <div id="result"></div>
         <div id="end"></div>
+        <div id="restart" style="display: none;">
+            <button onclick="restartQuiz()">重新開始</button> <!-- Chinese for "Restart" -->
+        </div>
         <div id="qCorrect"></div>
     </div>
-    <script src="quiz.js">
-    </script>
+    <div id="explanation-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-button" onclick="closeModal()">關閉</button>
+            <p id="explanation-text"></p>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
 </body>
 </html>
