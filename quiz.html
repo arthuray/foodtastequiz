@@ -3,86 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multiple Choice Quiz</title>
-    <link rel="stylesheet" href="quiz.css">
+    <title>食物知多少？</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="score-counter">Score: 0</div>
     <div class="quiz-container">
-        <h1>Multiple Choice Quiz</h1>
-        <p>Please select the best answer for each question.</p>
-
-        <form id="quiz-form" onsubmit="showFinalScore(event)">
-            <div class="question-container" id="question1">
-                <div class="question">What is the capital of France?</div>
-                <ul class="options">
-                    <li><label><input type="radio" name="q1" value="London"> London</label></li>
-                    <li><label><input type="radio" name="q1" value="Berlin"> Berlin</label></li>
-                    <li><label><input type="radio" name="q1" value="Paris"> Paris</label></li>
-                    <li><label><input type="radio" name="q1" value="Rome"> Rome</label></li>
-                </ul>
-                <button type="button" class="nav-button next" onclick="showNextQuestion(1)">Next ➡️</button>
-            </div>
-
-            <div class="question-container" id="question2">
-                <div class="question">Who painted the Mona Lisa?</div>
-                <ul class="options">
-                    <li><label><input type="radio" name="q2" value="Michelangelo"> Michelangelo</label></li>
-                    <li><label><input type="radio" name="q2" value="Leonardo da Vinci"> Leonardo da Vinci</label></li>
-                    <li><label><input type="radio" name="q2" value="Vincent van Gogh"> Vincent van Gogh</label></li>
-                    <li><label><input type="radio" name="q2" value="Pablo Picasso"> Pablo Picasso</label></li>
-                </ul>
-                <button type="button" class="nav-button prev" onclick="showPreviousQuestion(2)">⬅️ Previous</button>
-                <button type="button" class="nav-button next" onclick="showNextQuestion(2)">Next ➡️</button>
-            </div>
-
-            <div class="question-container" id="question3">
-                <div class="question">What is the highest mountain in the world?</div>
-                <ul class="options">
-                    <li><label><input type="radio" name="q3" value="Mount Everest"> Mount Everest</label></li>
-                    <li><label><input type="radio" name="q3" value="K2"> K2</label></li>
-                    <li><label><input type="radio" name="q3" value="Kangchenjunga"> Kangchenjunga</label></li>
-                    <li><label><input type="radio" name="q3" value="Lhotse"> Lhotse</label></li>
-                </ul>
-                <button type="button" class="nav-button prev" onclick="showPreviousQuestion(3)">⬅️ Previous</button>
-                <button type="submit" class="submit-button" onclick="showFinalScore">Submit Quiz</button>
-            </div>
-        </form>
-            <div id="final-score" class="final-score-container">
-                <h2>Your Score: <span id="score"></span></h2>
-                <h3>Percentage: <span id="percentage"></span>%</h3>
-            </div>
-    </div>
-    <div class="disclaimer">This is a prototype and subject to change</div>
-    
-    <!-- Config Button -->
-    <button id="config-button" onclick="toggleConfigPanel()">⚙️</button>
-
-    <!-- Config Panel -->
-    <div id="config-panel">
-        <!-- Close Button -->
-        <button id="config-close-button" onclick="toggleConfigPanel()">✖️</button>
-        <form id="login-form" onsubmit="authenticate(event)">
-            <h2>Admin Login</h2>
-            <input type="text" id="username" placeholder="Username" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <div id="config-content" style="display: none;">
-            <h2>Add New Question</h2>
-            <input type="text" id="new-question-text" placeholder="Question" required>
-            <!-- Input fields for options -->
-            <input type="text" id="new-option1" placeholder="Option 1" required>
-            <input type="text" id="new-option2" placeholder="Option 2" required>
-            <input type="text" id="new-option3" placeholder="Option 3" required>
-            <input type="text" id="new-option4" placeholder="Option 4" required>
-            <input type="text" id="new-question-answer" placeholder="Correct Answer" required>
-            <input type="text" id="new-question-reason" placeholder="Answer Explanation" required>
-            <button onclick="addNewQuestion()">Add Question</button>
-            <button onclick="logout()">Logout</button>
+        <h1>食物知多少？</h1>
+        <div id="question"></div>
+        <div id="options"></div>
+        <div id="submit">
+            <button onclick="checkAnswer()">提交答案</button>
         </div>
+        <br>
+        <div id="result"></div>
+        <div id="end"></div>
+        <div id="qCorrect"></div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="quiz.js">
+    </script>
 </body>
 </html>
