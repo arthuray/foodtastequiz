@@ -1,0 +1,209 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF0BE; /* Changed to warm yellow hue */
+    font-size: 140%; /* Increased base font size for better readability */
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.main-content {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.main-content img {
+    max-width: 75%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.student-names {
+    margin-top: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(211, 211, 211, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1001;
+}
+
+.sidebar a {
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #333;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #000;
+}
+
+.closebtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 2em;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 1.5em;
+    cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.7);
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.openbtn:hover {
+    background-color: rgba(169, 169, 169, 0.7);
+}
+
+body.sidebar-open .openbtn {
+    display: none;
+}
+
+body.sidebar-open .main-content {
+    margin-left: 250px;
+    transition: margin-left 0.5s;
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+.background-information,
+.research-information,
+.conclusion-information {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 30%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Styles for the STEM information box */
+.stem-information {
+    text-align: left;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 75%; /* Changed to match poster's width */
+    box-sizing: border-box;
+    margin: 20px auto; /* Center align */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        margin-top: 60px;
+    }
+
+    .main-content img {
+        max-width: 90%;
+    }
+
+    .sidebar {
+        padding-top: 40px;
+    }
+
+    .sidebar a {
+        font-size: 1.2em;
+        padding: 8px 20px;
+    }
+
+    .openbtn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2em;
+    }
+
+    body.sidebar-open .main-content {
+        margin-left: 200px;
+    }
+
+    .background-information,
+    .research-information,
+    .conclusion-information {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        top: 5px;
+        right: 5px;
+    }
+
+    .main-content {
+        margin-top: 40px;
+    }
+
+    .sidebar a {
+        font-size: 1em;
+        padding: 6px 15px;
+    }
+
+    .openbtn {
+        width: 30px;
+        height: 30px;
+        font-size: 1em;
+    }
+
+    body.sidebar-open .main-content {
+        margin-left: 180px;
+    }
+
+    .background-information,
+    .research-information,
+    .conclusion-information {
+        width: 100%;
+    }
+
+    .stem-information {
+        width: 100%;
+    }
+}
+
+/* Clear floats after the background-information and poster image */
+.main-content::after {
+    content: "";
+    display: table;
+    clear: both;
+}

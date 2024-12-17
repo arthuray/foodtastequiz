@@ -3,10 +3,10 @@ let questions = [
     {
         question: "如要補充鈣質，哪種食物最適合？",
         options: [
-            { text: "軟芝士", image: "quiz_imgasset/軟芝士.png" },
-            { text: "龍眼乾", image: "quiz_imgasset/龍眼乾.png" },
-            { text: "提子乾", image: "quiz_imgasset/提子乾.png" },
-            { text: "蘿蔔乾", image: "quiz_imgasset/蘿蔔乾.png" }
+            { text: "軟芝士", image: "./quiz_imgasset/軟芝士.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "蘿蔔乾", image: "./quiz_imgasset/蘿蔔乾.png" }
         ],
         correctAnswer: "軟芝士",
         explanation: "軟芝士富含鈣質，是補充鈣的良好來源。鈣對骨骼健康至關重要，特別是對於成長中的兒童和老年人。"
@@ -14,10 +14,10 @@ let questions = [
     {
         question: "哪一種食物富含膳食纖維？",
         options: [
-            { text: "杏脯", image: "quiz_imgasset/杏脯.png" },
-            { text: "紫菜", image: "quiz_imgasset/紫菜.png" },
-            { text: "龍眼乾", image: "quiz_imgasset/龍眼乾.png" },
-            { text: "軟芝士", image: "quiz_imgasset/軟芝士.png" }
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "軟芝士", image: "./quiz_imgasset/軟芝士.png" }
         ],
         correctAnswer: "紫菜",
         explanation: "紫菜是一種海藻，含有豐富的膳食纖維，有助於消化健康，並可以改善腸道功能。"
@@ -25,10 +25,10 @@ let questions = [
     {
         question: "如要改善睡眠，哪種食物最適合？",
         options: [
-            { text: "提子乾", image: "quiz_imgasset/提子乾.png" },
-            { text: "龍眼乾", image: "quiz_imgasset/龍眼乾.png" },
-            { text: "蘿蔔乾", image: "quiz_imgasset/蘿蔔乾.png" },
-            { text: "軟芝士", image: "quiz_imgasset/軟芝士.png" }
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "蘿蔔乾", image: "./quiz_imgasset/蘿蔔乾.png" },
+            { text: "軟芝士", image: "./quiz_imgasset/軟芝士.png" }
         ],
         correctAnswer: "龍眼乾",
         explanation: "龍眼乾被認為有助於安神和改善睡眠，因為它含有一些能促進放鬆的成分。"
@@ -36,10 +36,10 @@ let questions = [
     {
         question: "哪一種食物的來源是乾燥的根莖類？",
         options: [
-            { text: "龍眼乾", image: "quiz_imgasset/龍眼乾.png" },
-            { text: "紫菜", image: "quiz_imgasset/紫菜.png" },
-            { text: "蘿蔔乾", image: "quiz_imgasset/蘿蔔乾.png" },
-            { text: "杏脯", image: "quiz_imgasset/杏脯.png" }
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "蘿蔔乾", image: "./quiz_imgasset/蘿蔔乾.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
         ],
         correctAnswer: "蘿蔔乾",
         explanation: "蘿蔔乾是將蘿蔔這種根莖類蔬菜乾燥而成，常用於各種料理中，增加風味。"
@@ -47,10 +47,10 @@ let questions = [
     {
         question: "如要增強免疫系統，哪種食物最適合？",
         options: [
-            { text: "龍眼乾", image: "quiz_imgasset/龍眼乾.png" },
-            { text: "紫菜", image: "quiz_imgasset/紫菜.png" },
-            { text: "杏脯", image: "quiz_imgasset/杏脯.png" },
-            { text: "軟芝士", image: "quiz_imgasset/軟芝士.png" }
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
+            { text: "軟芝士", image: "./quiz_imgasset/軟芝士.png" }
         ],
         correctAnswer: "紫菜",
         explanation: "紫菜含有抗氧化劑和多種營養素，能增強免疫系統，有助於抵抗疾病。"
@@ -58,10 +58,10 @@ let questions = [
     {
         question: "哪一種食物不是乾果？",
         options: [
-            { text: "龍眼乾", image: "quiz_imgasset/龍眼乾.png" },
-            { text: "蘋果片", image: "quiz_imgasset/蘋果片.png" },
-            { text: "蘿蔔乾", image: "quiz_imgasset/蘿蔔乾.png" },
-            { text: "提子乾", image: "quiz_imgasset/提子乾.png" }
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "蘿蔔乾", image: "./quiz_imgasset/蘿蔔乾.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" }
         ],
         correctAnswer: "蘿蔔乾",
         explanation: "蘿蔔乾是根莖類蔬菜的乾燥形式，而乾果通常指的是乾燥的水果，如提子乾或杏脯。"
@@ -69,10 +69,10 @@ let questions = [
     {
         question: "如要補充維生素C，哪種食物最適合？",
         options: [
-            { text: "提子乾", image: "quiz_imgasset/提子乾.png" },
-            { text: "杏脯", image: "quiz_imgasset/杏脯.png" },
-            { text: "軟芝士", image: "quiz_imgasset/軟芝士.png" },
-            { text: "紫菜", image: "quiz_imgasset/紫菜.png" }
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
+            { text: "軟芝士", image: "./quiz_imgasset/軟芝士.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" }
         ],
         correctAnswer: "杏脯",
         explanation: "杏脯是杏子的乾燥版本，含有較高的維生素C，有助於增強免疫系統和促進皮膚健康。"
@@ -80,10 +80,10 @@ let questions = [
     {
         question: "哪一種食物最容易導致過敏反應，要小心食用？",
         options: [
-            { text: "龍眼乾", image: "quiz_imgasset/龍眼乾.png" },
-            { text: "提子乾", image: "quiz_imgasset/提子乾.png" },
-            { text: "蘿蔔乾", image: "quiz_imgasset/蘿蔔乾.png" },
-            { text: "軟芝士", image: "quiz_imgasset/軟芝士.png" }
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "蘿蔔乾", image: "./quiz_imgasset/蘿蔔乾.png" },
+            { text: "軟芝士", image: "./quiz_imgasset/軟芝士.png" }
         ],
         correctAnswer: "軟芝士",
         explanation: "軟芝士可能含有乳製品成分，對於某些人來說，乳製品可能引起過敏反應。"
