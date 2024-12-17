@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    font-size: 200%; /* Increased font size by 100% */
+    font-size: 120%; /* Increased base font size */
 }
 
 .quiz-container {
@@ -28,7 +28,7 @@ button:hover {
 }
 
 button, label {
-    font-size: 30px; /* Set a uniform font size */
+    font-size: 1.5em; /* Use relative units */
 }
 
 label, input {
@@ -64,9 +64,8 @@ label:hover {
 }
 
 label::before {
-  content: attr(data-number) ". ";
-  font-weight: bold;
-  margin-right: 10px;
+  /* Remove the content to avoid numbering duplication */
+  content: "";
 }
 
 .modal {
@@ -89,18 +88,22 @@ label::before {
     width: 80%; /* Adjust as needed */
     position: relative;
     border-radius: 5px;
+    max-height: 80vh; /* Limits the modal height */
+    overflow-y: auto;  /* Adds scroll if content is too long */
+    font-size: 1em; /* Use relative units */
 }
 
 .modal-content p {
-    font-size: 24px; /* Adjust font size for better readability */
+    font-size: 2.5em; /* Increased from 1em to 2.5em */
 }
 
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    position: absolute; /* Positions the close button relative to modal-content */
+    top: 10px;          /* Positions 10px from the top */
+    right: 10px;        /* Positions 10px from the right */
+    z-index: 1;         /* Ensures the button stays above other elements */
     padding: 10px 20px;
-    font-size: 30px; /* Adjust font size as needed */
+    font-size: 1.5em; /* Use relative units */
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -146,4 +149,100 @@ label::before {
     background-color: #76c7c0;
     border-radius: 5px;
     transition: width 0.3s ease;
+}
+
+.option-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9; /* Add background color for uniformity */
+    padding: 15px; /* Add padding for spacing */
+    border: 1px solid #ccc; /* Add border for visual separation */
+    border-radius: 5px; /* Rounded corners for consistency */
+    width: 100%; /* Ensure all option boxes have the same width */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 1em; /* Ensure font-size inherits from body */
+}
+
+.option-container input[type="radio"] {
+    margin-right: 10px;
+}
+
+.option-container label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: calc(100% - 170px); /* Adjust width to fit next to image */
+}
+
+.option-container img {
+    width: 7em;  /* Adjust image size using em units */
+    height: 7em;
+    margin-right: 20px; /* Space between image and text */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.option-container span {
+    font-size: 1.2em; /* Adjust as needed for larger text */
+    word-break: break-word; /* Wrap text if it's too long */
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+/* Set the h1 text to match body font size */
+h1 {
+    font-size: 1em; /* Changed from 2em to match body text */
+}
+
+/* Increase the font size of the question text */
+#question {
+    font-size: 2.5em; /* Set to a larger size for prominence */
+    margin-bottom: 20px; /* Optional: Adds spacing below the question */
+}
+
+#text-magnifier {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1000;
+    /* Adjust width to accommodate the new input */
+    width: auto;
+}
+
+#text-magnifier input[type="range"] {
+    width: 150px;
+    vertical-align: middle;
+}
+
+#text-magnifier input[type="number"] {
+    display: none; /* Hide the number input if still present */
+    width: 60px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+#text-magnifier input {
+    font-size: 1em;
+}
+
+#text-magnifier select {
+    width: 80px;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-size: 1em;
+}
+
+/* Increase font size for result and end text */
+#result {
+    font-size: 2em; /* Make result text larger */
+}
+
+#end {
+    font-size: 2.5em; /* Make end results text even larger */
 }

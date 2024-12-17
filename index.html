@@ -14,7 +14,7 @@
         </div>
         <h1>食物知多少？</h1>
         <div id="question"></div>
-        <div id="options"></div>
+        <div id="options" class="options-container"></div>
         <div id="submit">
             <button onclick="checkAnswer()">提交答案</button>
         </div>
@@ -31,6 +31,19 @@
             <button class="close-button" onclick="closeModal()">關閉</button>
             <p id="explanation-text"></p>
         </div>
+    </div>
+    <!-- Text Magnifier Slider -->
+    <div id="text-magnifier">
+        字體大小：
+        <input type="range" id="fontSizeSlider" min="50" max="300" value="100">
+        <select id="fontSizeSelect">
+            <option value="50">50%</option>
+            <option value="100" selected>100%</option>
+            <option value="150">150%</option>
+            <option value="200">200%</option>
+            <option value="250">250%</option>
+            <option value="300">300%</option>
+        </select>
     </div>
     <script src="quiz.js"></script>
 </body>
