@@ -1,0 +1,2 @@
+# Ignore all workflow files and the workflows directory
+.github/workflows/
