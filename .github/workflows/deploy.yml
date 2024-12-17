@@ -1,0 +1,34 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change this if your default branch is different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Sync with arthuray.github.io
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        run: |
+          # Configure Git
+          git config --global user.name "Arthur A"
+          git config --global user.email "auyeungarthur2@gmail.com"
+
+          # Clone the arthuray.github.io repository
+          git clone https://arthuray:${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/arthuray/arthuray.github.io.git ../github.io
+
+          # Copy files to the GitHub Pages repo (exclude the .git directory)
+          rsync -av --exclude='.git' --delete ./ ../github.io/
+
+          # Commit and push changes
+          cd ../github.io
+          git add .
+          git commit -m "Deploy updates from foodtastequiz"
+          git push
