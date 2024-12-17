@@ -5,7 +5,7 @@ body {
 }
 
 .quiz-container {
-    max-width: 800px; /* Increased from 600px to 800px */
+    max-width: 90%; /* Changed from fixed width to 90% */
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
@@ -151,6 +151,15 @@ label::before {
     transition: width 0.3s ease;
 }
 
+/* Adjust options container to allow side-by-side layout */
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    counter-reset: option; /* Initialize counter for options */
+}
+
+/* Consolidated option-container styles for two options per row */
 .option-container {
     display: flex;
     align-items: center;
@@ -159,9 +168,15 @@ label::before {
     padding: 15px; /* Add padding for spacing */
     border: 1px solid #ccc; /* Add border for visual separation */
     border-radius: 5px; /* Rounded corners for consistency */
-    width: 100%; /* Ensure all option boxes have the same width */
+    width: 48%; /* Fit two options per row */
     box-sizing: border-box; /* Include padding and border in width */
     font-size: 1em; /* Ensure font-size inherits from body */
+    counter-increment: option; /* Increment counter for each option */
+}
+
+/* Remove margin on the right for every second option */
+.option-container:nth-child(2n) {
+    margin-right: 0;
 }
 
 .option-container input[type="radio"] {
@@ -175,9 +190,15 @@ label::before {
     width: calc(100% - 170px); /* Adjust width to fit next to image */
 }
 
+.option-container label::before {
+    content: counter(option) ". ";
+    font-weight: bold;
+    margin-right: 10px; /* Display counter before label text */
+}
+
 .option-container img {
-    width: 7em;  /* Adjust image size using em units */
-    height: 7em;
+    width: 20vw; /* Use viewport width units */
+    height: auto; /* Maintain aspect ratio */
     margin-right: 20px; /* Space between image and text */
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -245,4 +266,54 @@ h1 {
 
 #end {
     font-size: 2.5em; /* Make end results text even larger */
+}
+
+/* Adjust font sizes for smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 100%; /* Adjust base font size */
+    }
+    
+    .modal-content p,
+    #question,
+    #end,
+    #result {
+        font-size: 1.5em; /* Adjust font sizes */
+    }
+
+    .option-container img {
+        width: 30vw; /* Adjust image size */
+    }
+
+    .option-container {
+        width: 100%; /* Stack options vertically */
+    }
+}
+
+/* Adjust layout for very small screens */
+@media (max-width: 480px) {
+    body {
+        font-size: 90%; /* Further adjust base font size */
+    }
+    
+    .modal-content p,
+    #question,
+    #end,
+    #result {
+        font-size: 1.2em; /* Further adjust font sizes */
+    }
+    
+    .option-container {
+        flex-direction: column; /* Stack options vertically */
+        align-items: flex-start;
+    }
+    
+    .option-container img {
+        width: 50vw; /* Adjust image width */
+        margin-bottom: 10px;
+    }
+    
+    .option-container label {
+        width: 100%; /* Ensure labels take full width */
+    }
 }
