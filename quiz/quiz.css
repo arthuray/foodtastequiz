@@ -320,80 +320,53 @@ h1 {
     }
 }
 
-/* Sidebar styling */
-.sidebar {
-    height: 100%; /* Full-height */
-    width: 0; /* Initially hidden */
-    position: fixed; /* Stay in place */
-    top: 0;
-    left: 0;
-    background-color: rgba(211, 211, 211, 0.9); /* Light gray with transparency */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* Smooth transition */
-    padding-top: 60px; /* Place content 60px from the top */
-    z-index: 1001; /* Above other elements */
+/* Remove sidebar and open button styles */
+
+/* Navigation Bar Styles */
+nav {
+    background-color: rgba(211, 211, 211, 0.7); /* Transparent gray */
+    height: 40px; /* Shorter height */
+    width: 100%;
+    z-index: 1000;
 }
 
-.sidebar a {
-    padding: 10px 30px;
-    text-decoration: none;
-    font-size: 1.5em;
-    color: #333; /* Darker text for better readability */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;          /* Use Flexbox for horizontal alignment */
+    align-items: center;    /* Vertically center items */
+}
+
+nav li {
+    /* Remove float: left; */
+}
+
+nav li.logo {
+    margin-right: 20px;     /* Add space between logo and navigation links */
+}
+
+nav li.logo img {
+    height: 40px;           /* Increase logo size */
+    width: auto;
+}
+
+nav li a {
     display: block;
-    transition: 0.3s;
+    color: black; /* Changed text color to black */
+    text-align: center;
+    padding: 0 15px; /* Reduce padding */
+    text-decoration: none;
 }
 
-.sidebar a:hover {
-    color: #000; /* Even darker on hover */
+nav li a:hover {
+    background-color: #ddd;
+    color: black;
 }
 
-.closebtn {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-size: 2em;
-    margin-left: 50px;
-}
-
-/* Style the toggle button as a smaller round, light gray transparent circle */
-.openbtn {
-    font-size: 1.5em; /* Reduced font size */
-    cursor: pointer;
-    background-color: rgba(211, 211, 211, 0.7); /* Light gray with transparency */
-    color: white;
-    padding: 5px; /* Reduced padding */
-    border: none;
-    border-radius: 50%; /* Makes it a circle */
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1002; /* Ensure it's above quiz elements */
-    width: 40px; /* Reduced width */
-    height: 40px; /* Reduced height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.openbtn:hover {
-    background-color: rgba(169, 169, 169, 0.7); /* Darker gray on hover */
-}
-
-/* Hide the toggle button when the sidebar is open */
-body.sidebar-open .openbtn {
-    display: none;
-}
-
-/* Adjust quiz-container to have some left margin when sidebar is open */
-body.sidebar-open .quiz-container {
-    margin-left: 250px; /* Adjust based on sidebar width */
-    transition: margin-left 0.5s;
-}
-
-/* Adjust for responsiveness */
-@media screen and (max-width: 600px) {
-    .sidebar a {font-size: 1.2em;}
-    .openbtn {font-size: 1.5em;}
-    .sidebar {padding-top: 15px;}
-    .closebtn {font-size: 1.5em;}
+/* Clear floats after the navigation items */
+nav::after {
+    content: "";
+    display: table;
+    clear: both;
 }

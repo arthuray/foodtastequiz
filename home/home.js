@@ -1,11 +1,3 @@
-// Function to open the sidebar
-function openSidebar() {
-    document.getElementById("sidebar").style.width = "250px";
-    document.body.classList.add('sidebar-open');
-}
+/* Remove openSidebar() and closeSidebar() functions */
 
-// Function to close the sidebar
-function closeSidebar() {
-    document.getElementById("sidebar").style.width = "0";
-    document.body.classList.remove('sidebar-open');
-}
+/* ...existing code... */

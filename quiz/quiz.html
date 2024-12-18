@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="./quiz.css">
 </head>
 <body>
+    <!-- Add Navigation Bar -->
+    <nav>
+        <ul>
+            <li class="logo">
+                <a href="../home/home.html">
+                    <img src="../home/homeassets/HKCCCULA.png" alt="HKCCCULA Logo">
+                </a>
+            </li>
+            <li><a href="../home/home.html">首頁</a></li>
+            <li><a href="quiz.html">測驗頁面</a></li>
+        </ul>
+    </nav>
     <div class="quiz-container">
         <!-- Progress Bar -->
         <div id="progress-bar-container">
@@ -45,16 +57,6 @@
             <option value="300">300%</option>
         </select>
     </div>
-
-    <!-- Add Sidebar -->
-    <div id="sidebar" class="sidebar">
-        <a class="closebtn" onclick="closeSidebar()">&times;</a>
-        <a href="../home/home.html">首頁</a>
-        <a href="quiz.html">測驗頁面</a> <!-- Added link to the quiz page -->
-    </div>
-
-    <!-- Add Toggle Button -->
-    <span class="openbtn" onclick="openSidebar()">&#9776;</span>
 
     <script src="./quiz.js"></script>
 </body>
