@@ -269,3 +269,42 @@ document.getElementById('fontSizeInput').addEventListener('input', function() {
     document.documentElement.style.fontSize = value + '%';
     document.getElementById('fontSizeSlider').value = value;
 });
+
+// Fullscreen Toggle Functionality
+fullscreenButton.addEventListener('click', () => {
+    // Check all possible fullscreen states
+    if (
+        !document.fullscreenElement &&
+        !document.mozFullScreenElement &&
+        !document.webkitFullscreenElement &&
+        !document.msFullscreenElement
+    ) {
+        // Request Fullscreen with vendor prefixes
+        if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+        } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+            document.documentElement.msRequestFullscreen();
+        }
+        document.body.classList.add('fullscreen');
+        fullscreenButton.textContent = '退出全屏';
+    } else {
+        // Exit Fullscreen with vendor prefixes
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+        document.body.classList.remove('fullscreen');
+        fullscreenButton.textContent = '全屏';
+    }
+});
+
+console.log('Fullscreen Button:', fullscreenButton);
