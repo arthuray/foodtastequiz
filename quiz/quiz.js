@@ -527,8 +527,25 @@ function startQuiz() {
     document.querySelector('.quiz-container').style.display = 'block';
 }
 
-function testFood() {
-    window.open('https://example.com', '_blank'); // Replace with the actual URL
+function testFood(motor_id) {
+    spinMotor(motor_id); // Trigger the motor spin
+}
+
+function spinMotor(motor_id) {
+    fetch('http://192.168.17.91:5000/dispense', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ motor_id: motor_id })
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert(data.message || data.error);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }
 
 for (let i = 0; i < questions.length; i++) {
@@ -555,8 +572,10 @@ document.addEventListener('keydown', function(event) {
         document.querySelector('.start-page').style.display = 'block';
         document.querySelector('.quiz-container').style.display = 'none';
         restartQuiz();
+    } else if (event.key === '8') {
+        document.querySelector('button[onclick="testFood(\'motor1\')"]').click(); // Trigger motor 1
     } else if (event.key === '9') {
-        testFood();
+        document.querySelector('button[onclick="testFood(\'motor2\')"]').click(); // Trigger motor 2
     }
 });
 
