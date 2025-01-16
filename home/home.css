@@ -92,7 +92,7 @@ img {
     display: flex;
     justify-content: space-between;
     margin: 20px auto;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: wrap; /* Allow wrapping */
 }
 
 .background-information,
@@ -105,8 +105,8 @@ img {
     width: 30%;
     box-sizing: border-box;
     margin-bottom: 20px;
-    margin: 30px;              /* Increased from previous value */
-    flex: 1; /* Allow boxes to grow and shrink equally */
+    margin: 10px; /* Adjust margin for better spacing */
+    flex: 1 1 30%; /* Allow boxes to grow and shrink */
 }
 
 /* Styles for the STEM information box */
