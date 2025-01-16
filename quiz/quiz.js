@@ -157,7 +157,7 @@ let questions = [
     {
         question: "哪種食物中的天然糖分能提供持久能量？",
         options: [
-            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
             { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
             { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
             { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" }
@@ -489,15 +489,20 @@ function selectAnswer() {
 
     let resultText = "";
     let emoji = "";
+    let audio = new Audio(); // Create a new audio element
 
     if (selectedAnswer === questions[currentQuestion].correctAnswer) {
         score++;
         emoji = "✅"; // Tick emoji for correct answer
         resultText = `${emoji} 答對了！做得好！`;
+        audio.src = 'soundfx/correct.mp3'; // Set the source to correct.mp3
     } else {
         emoji = "❌"; // Cross emoji for incorrect answer
         resultText = `${emoji} 答錯了。`;
+        audio.src = 'soundfx/incorrect.mp3'; // Set the source to incorrect.mp3
     }
+
+    audio.play(); // Play the audio
 
     document.getElementById("result").textContent = resultText;
 
