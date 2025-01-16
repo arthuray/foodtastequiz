@@ -1,2 +1,5 @@
 # Ignore all workflow files and the workflows directory
 .github/workflows/
+.DS_Store
+/quiz/.DS_Store
+/quiz/quiz_imgasset/.DS_Store

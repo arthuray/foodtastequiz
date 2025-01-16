@@ -88,6 +88,337 @@ let questions = [
         correctAnswer: "軟芝士",
         explanation: "軟芝士可能含有乳製品成分，對於某些人來說，乳製品可能引起過敏反應。"
     },
+    {
+        question: "哪一種食物是海藻類？有什麼好?",
+        options: [
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "蔬菜片", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "海藻富含維生素、礦物質、纖維、抗氧化劑和植物蛋白，有助於維持健康、增強免疫和減肥。"
+    },
+    {
+        question: "哪種食物對腸道有益？",
+        options: [
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "蔬菜片", image: "./quiz_imgasset/蔬菜片.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "紫菜富含可溶性和不可溶性纖維，有助於調節血糖、降低膽固醇，並預防便秘。"
+    },
+    {
+        question: "如要改善睡眠，哪種食物最適合？",
+        options: [
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "蔬菜片", image: "./quiz_imgasset/蔬菜片.png" }
+        ],
+        correctAnswer: "龍眼乾",
+        explanation: "龍眼乾具有安神功效，能減少焦慮，促進安穩睡眠"
+    },
+    {
+        question: "如要增強免疫系統，哪種食物最適合？",
+        options: [
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "紫菜富含抗氧化劑（如維生素C和維生素E）、礦物質（如鋅和鐵）和多糖類物質，有助於增強免疫細胞的功能，提升身體的抗病能力。"
+    },
+    {
+        question: "哪種食物能增強免疫力,預防生病？",
+        options: [
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "提子乾",
+        explanation: "提子乾中含有豐富的抗氧化劑，可以增強免疫系統"
+    },
+    {
+        question: "哪種食物可以作為健康的小吃，並且適合老年人？",
+        options: [
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "爆谷", image: "./quiz_imgasset/爆谷.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "爆谷",
+        explanation: "爆谷熱量低，味道好，適合老年人吃"
+    },
+    {
+        question: "哪種食物中的天然糖分能提供持久能量？",
+        options: [
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" }
+        ],
+        correctAnswer: "龍眼乾",
+        explanation: "龍眼乾中的天然糖分能迅速被身體吸收，提供即時的能量，特別適合運動前食用。"
+    },
+    {
+        question: "哪種食物富含維他命A，有助於維護視力？",
+        options: [
+            { text: "蔬菜片", image: "./quiz_imgasset/蔬菜片.png" },
+            { text: "爆谷", image: "./quiz_imgasset/爆谷.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" }
+        ],
+        correctAnswer: "蔬菜片",
+        explanation: "蔬菜片通常含有豐富的維他命A，這種維他命對於視網膜健康和夜間視力至關重要。"
+    },
+    {
+        question: "哪種食物能幫助改善皮膚健康？",
+        options: [
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "提子乾",
+        explanation: "提子乾中的抗氧化劑能保護皮膚，從而改善皮膚健康。"
+    },
+    {
+        question: "哪種食物對血液健康有益？",
+        options: [
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "無添加紫菜富含維他命K，有助於促進正常的血液凝固功能。"
+    },
+    {
+        question: "如要增強免疫系統，哪種食物最適合？",
+        options: [
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "紫菜富含抗氧化劑（如維生素C和維生素E）、礦物質（如鋅和鐵）和多糖類物質，有助於增強免疫細胞的功能，提升身體的抗病能力。"
+    },
+    {
+        question: "哪種食物能提供多種微量元素，對老年人特別有益？",
+        options: [
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "無添加紫菜富含多種微量營養素，對於老年人的整體健康非常有益。"
+    },
+    {
+        question: "哪種食物富含維他命C，有助於提高膠原蛋白合成？",
+        options: [
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" }
+        ],
+        correctAnswer: "蘋果片",
+        explanation: "維他命C對於膠原蛋白可以提供很多幫助，有助於維持皮膚的健康。"
+    },
+    {
+        question: "哪種食物含有豐富的維他命A，有助於視力健康？",
+        options: [
+            { text: "蔬菜片", image: "./quiz_imgasset/蔬菜片.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" }
+        ],
+        correctAnswer: "蔬菜片",
+        explanation: "蔬菜片通常富含維他命A，這對維護視力和眼睛健康可以提供很多幫助。"
+    },
+    {
+        question: "哪種食物能幫助維持腸道健康，並且富含益生元？",
+        options: [
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" },
+            { text: "蔬菜片", image: "./quiz_imgasset/蔬菜片.png" }
+        ],
+        correctAnswer: "消化餅",
+        explanation: "消化餅富含益生元，能促進腸道內有益菌的生長，維持腸道健康。"
+    },
+    {
+        question: "哪種食物能幫助改善心情，因其含有色氨酸？",
+        options: [
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" }
+        ],
+        correctAnswer: "混合果仁",
+        explanation: "混合果仁含有色氨酸, 有效幫助您每天保持愉快的情緒。"
+    },
+    {
+        question: "哪種食物能提供豐富的纖維，有助於降低膽固醇？",
+        options: [
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "爆谷", image: "./quiz_imgasset/爆谷.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "爆谷",
+        explanation: "爆谷中的膳食纖維有助於降低血液中的膽固醇水平，促進心血管健康。"
+    },
+    {
+        question: "哪種食物特別適合季節交替時食用？",
+        options: [
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" }
+        ],
+        correctAnswer: "提子乾",
+        explanation: "提子乾富含抗氧化劑，有助於提高免疫力，抵抗感冒。"
+    },
+    {
+        question: "哪種食物適合用作健康的甜點？",
+        options: [
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "爆谷", image: "./quiz_imgasset/爆谷.png" }
+        ],
+        correctAnswer: "龍眼乾",
+        explanation: "龍眼乾因其天然甜味，零添加物，能作為健康的甜點選擇。"
+    },
+    {
+        question: "哪種食物能幫助身體抵抗感染？",
+        options: [
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "無添加紫菜含有豐富的維他命C，有助於增強免疫系統。"
+    },
+    {
+        question: "哪種食物有助於提升能量代謝？",
+        options: [
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" }
+        ],
+        correctAnswer: "混合果仁",
+        explanation: "混合果仁中的維他命B群有助於促進能量的生成和代謝。"
+    },
+    {
+        question: "哪種食物能有效緩解消化不良，富含天然酵素？",
+        options: [
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" }
+        ],
+        correctAnswer: "消化餅",
+        explanation: "消化餅中的天然酵素能幫助改善消化不良的問題。"
+    },
+    {
+        question: "哪種食物有助於降低血壓？",
+        options: [
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "爆谷", image: "./quiz_imgasset/爆谷.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "爆谷",
+        explanation: "爆谷中的膳食纖維有助於降低血壓，促進心血管健康。"
+    },
+    {
+        question: "哪種食物能幫助提高記憶力？",
+        options: [
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" }
+        ],
+        correctAnswer: "混合果仁",
+        explanation: "混合果仁中的抗氧化劑有助於提高記憶力和認知功能。"
+    },
+    {
+        question: " 哪種食物能幫助增強骨骼密度，預防骨折？",
+        options: [
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "無添加紫菜含有豐富的鈣質，有助於增強骨骼密度。"
+    },
+    {
+        question: "哪種食物含有抗炎特性，對關節健康有益？",
+        options: [
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" }
+        ],
+        correctAnswer: "混合果仁",
+        explanation: "混合果仁中的健康脂肪有助於減少體內的炎症。"
+    },
+    {
+        question: "哪種食物適合在熱天食用？",
+        options: [
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" }
+        ],
+        correctAnswer: "蘋果片",
+        explanation: "蘋果片清脆，能幫助在炎熱的天氣中降溫。"
+    },
+    {
+        question: "哪種食物能幫助維持血糖穩定，因其含有低升糖指數？",
+        options: [
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "無添加紫菜的低升糖指數特性有助於維持血糖穩定。"
+    },
+    {
+        question: " 哪種食物適合用作健康的早餐搭配？",
+        options: [
+            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" }
+        ],
+        correctAnswer: "蘋果片",
+        explanation: "蘋果片低熱量且富含纖維，適合作為早餐搭配。"
+    },
+    {
+        question: "哪種食物能幫助減少肌肉痙攣？",
+        options: [
+            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
+            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
+            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
+            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" }
+        ],
+        correctAnswer: "紫菜",
+        explanation: "無添加紫菜含有鉀，有助於減少肌肉痙攣。"
+    },
+
 
 ];
 
@@ -95,7 +426,7 @@ let questions = [
 questions.sort(() => Math.random() - 0.5);
 let currentQuestion = 0;
 let score = 0;
-let maxQuestion = 5;
+let maxQuestion = 10;
 
 document.getElementById("qCorrect").textContent = `第 ${currentQuestion+1} 條題目，共 ${maxQuestion} 條。`;
 
@@ -241,6 +572,8 @@ document.addEventListener('keydown', function(event) {
         } else {
             checkAnswer();
         }
+    } else if (event.key === '0') {
+        restartQuiz(); // Restart the quiz when "0" is pressed
     }
 });
 
