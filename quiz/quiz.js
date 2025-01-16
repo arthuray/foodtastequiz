@@ -1,4 +1,3 @@
-// Define your questions and answers here
 let questions = [
     {
         question: "如要補充鈣質，哪種食物最適合？",
@@ -55,17 +54,7 @@ let questions = [
         correctAnswer: "紫菜",
         explanation: "紫菜含有抗氧化劑和多種營養素，能增強免疫系統，有助於抵抗疾病。"
     },
-    {
-        question: "哪一種食物不是乾果？",
-        options: [
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
-            { text: "蘿蔔乾", image: "./quiz_imgasset/蘿蔔乾.png" },
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" }
-        ],
-        correctAnswer: "蘿蔔乾",
-        explanation: "蘿蔔乾是根莖類蔬菜的乾燥形式，而乾果通常指的是乾燥的水果，如提子乾或杏脯。"
-    },
+
     {
         question: "如要補充維生素C，哪種食物最適合？",
         options: [
@@ -418,17 +407,14 @@ let questions = [
         correctAnswer: "紫菜",
         explanation: "無添加紫菜含有鉀，有助於減少肌肉痙攣。"
     },
-
-
 ];
 
-// Shuffle the questions array to randomize question order
 questions.sort(() => Math.random() - 0.5);
 let currentQuestion = 0;
 let score = 0;
-let maxQuestion = 10;
+const maxQuestion = 10;
 
-document.getElementById("qCorrect").textContent = `第 ${currentQuestion+1} 條題目，共 ${maxQuestion} 條。`;
+document.getElementById("qCorrect").textContent = `第 ${currentQuestion + 1} 條題目，共 ${maxQuestion} 條。`;
 
 function sort(a) {
     a.sort(() => Math.random() - 0.5);
@@ -442,73 +428,54 @@ function loadQuestion() {
     questionElement.textContent = questions[currentQuestion].question;
     optionsElement.innerHTML = "";
 
-    // Update Progress Bar
-    let progressPercentage = ((currentQuestion) / maxQuestion) * 100;
-    progressBar.style.width = `${progressPercentage}%`;
+    progressBar.style.width = `${(currentQuestion / maxQuestion) * 100}%`;
 
     questions[currentQuestion].options.forEach((option, index) => {
-        var optionContainer = document.createElement('div');
+        const optionContainer = document.createElement('div');
         optionContainer.classList.add('option-container');
 
-        var input = document.createElement('input');
+        const input = document.createElement('input');
         input.type = "radio";
         input.name = "123";
         input.value = option.text;
-        input.setAttribute("id", option.text);
-        input.setAttribute("data-index", index + 1);
+        input.id = option.text;
+        input.dataset.index = index + 1;
 
-        var label = document.createElement('label');
-        label.setAttribute("for", option.text);
-        label.setAttribute("data-number", index + 1);
+        const label = document.createElement('label');
+        label.htmlFor = option.text;
+        label.dataset.number = index + 1;
 
-        var img = document.createElement('img');
+        const img = document.createElement('img');
         img.src = option.image;
         img.alt = option.text;
 
-        var textSpan = document.createElement('span');
+        const textSpan = document.createElement('span');
         textSpan.textContent = option.text;
 
-        label.appendChild(img);
-        label.appendChild(textSpan);
-
-        optionContainer.appendChild(input);
-        optionContainer.appendChild(label);
-
+        label.append(img, textSpan);
+        optionContainer.append(input, label);
         optionsElement.appendChild(optionContainer);
     });
-    
 }
 
 function selectAnswer() {
     const selectedOption = document.querySelector('input[name="123"]:checked');
-    if (!selectedOption) {
-        // Removed the alert to prevent popup
-        return;
-    }
-    const selectedAnswer = selectedOption.value;
+    if (!selectedOption) return;
 
-    let resultText = "";
-    let emoji = "";
-    let audio = new Audio(); // Create a new audio element
+    const selectedAnswer = selectedOption.value;
+    const audio = new Audio();
 
     if (selectedAnswer === questions[currentQuestion].correctAnswer) {
         score++;
-        emoji = "✅"; // Tick emoji for correct answer
-        resultText = `${emoji} 答對了！做得好！`;
-        audio.src = 'soundfx/correct.mp3'; // Set the source to correct.mp3
+        audio.src = 'soundfx/correct.mp3';
+        document.getElementById("result").textContent = "✅ 答對了！做得好！";
     } else {
-        emoji = "❌"; // Cross emoji for incorrect answer
-        resultText = `${emoji} 答錯了。`;
-        audio.src = 'soundfx/incorrect.mp3'; // Set the source to incorrect.mp3
+        audio.src = 'soundfx/incorrect.mp3';
+        document.getElementById("result").textContent = "❌ 答錯了。";
     }
 
-    audio.play(); // Play the audio
-
-    document.getElementById("result").textContent = resultText;
-
-    // Show the explanation with the emoji in the modal
-    const explanation = questions[currentQuestion].explanation;
-    document.getElementById("explanation-text").textContent = `${resultText} ${explanation}`;
+    audio.play();
+    document.getElementById("explanation-text").textContent = `${document.getElementById("result").textContent} ${questions[currentQuestion].explanation}`;
     openModal();
 }
 
@@ -529,21 +496,15 @@ function closeModal() {
         document.getElementById("options").textContent = "";
         document.getElementById("end").textContent = `遊戲結束！分數：${score}/${maxQuestion}`;
         document.getElementById("qCorrect").textContent = "";
-
-        // Update Progress Bar to 100%
-        const progressBar = document.getElementById("progress-bar");
-        progressBar.style.width = `100%`;
-
+        document.getElementById("progress-bar").style.width = `100%`;
         document.getElementById("submit").textContent = "";
-        document.getElementById("restart").style.display = "block"; // Show restart button
+        document.getElementById("restart").style.display = "block";
 
-        // Play finish.mp3 at the results page
-        let finishAudio = new Audio('soundfx/finish.mp3');
+        const finishAudio = new Audio('soundfx/finish.mp3');
         finishAudio.play();
     }
 }
 
-// Modify checkAnswer to correctly submit without relying on button focus
 function checkAnswer() {
     selectAnswer();
 }
@@ -551,12 +512,12 @@ function checkAnswer() {
 function restartQuiz() {
     score = 0;
     currentQuestion = 0;
-    questions.sort(() => Math.random() - 0.5); // Shuffle questions again
+    questions.sort(() => Math.random() - 0.5);
     document.getElementById("end").textContent = "";
     document.getElementById("restart").style.display = "none";
     document.getElementById("qCorrect").textContent = `第 ${currentQuestion + 1} 條題目，共 ${maxQuestion} 條。`;
     loadQuestion();
-    document.getElementById("submit").innerHTML = '<button onclick="checkAnswer()">提交答案</button>'; // Restore submit button
+    document.getElementById("submit").innerHTML = '<button onclick="checkAnswer()">提交答案</button>';
 }
 
 for (let i = 0; i < questions.length; i++) {
@@ -565,15 +526,11 @@ for (let i = 0; i < questions.length; i++) {
 
 loadQuestion();
 
-// Modify the keydown event listener to handle both number keys and "Enter"
 document.addEventListener('keydown', function(event) {
     if (['1', '2', '3', '4'].includes(event.key)) {
-        event.preventDefault(); // Prevent the slider from adjusting
-        const optionNumber = event.key;
-        const optionInput = document.querySelector(`input[data-index="${optionNumber}"]`);
-        if (optionInput) {
-            optionInput.click(); // Simulate a click to properly check the radio button
-        }
+        event.preventDefault();
+        const optionInput = document.querySelector(`input[data-index="${event.key}"]`);
+        if (optionInput) optionInput.click();
     } else if (event.key === 'Enter') {
         const modal = document.getElementById("explanation-modal");
         if (modal.style.display === "block") {
@@ -582,46 +539,33 @@ document.addEventListener('keydown', function(event) {
             checkAnswer();
         }
     } else if (event.key === '0') {
-        restartQuiz(); // Restart the quiz when "0" is pressed
+        restartQuiz();
     }
 });
 
-// Update event listener for the font size slider
 document.getElementById('fontSizeSlider').addEventListener('input', function() {
     const fontSize = this.value + '%';
     document.documentElement.style.fontSize = fontSize;
     document.getElementById('fontSizeSelect').value = this.value;
 });
 
-// Add event listener for the font size dropdown
 document.getElementById('fontSizeSelect').addEventListener('change', function() {
-    const value = this.value;
-    const fontSize = value + '%';
+    const fontSize = this.value + '%';
     document.documentElement.style.fontSize = fontSize;
-    document.getElementById('fontSizeSlider').value = value;
+    document.getElementById('fontSizeSlider').value = this.value;
 });
 
-// Add event listener for the font size input field
 document.getElementById('fontSizeInput').addEventListener('input', function() {
     let value = parseInt(this.value);
     if (isNaN(value)) return;
-    if (value < 50) value = 50;
-    if (value > 300) value = 300;
+    value = Math.max(50, Math.min(300, value));
     this.value = value;
     document.documentElement.style.fontSize = value + '%';
     document.getElementById('fontSizeSlider').value = value;
 });
 
-// Fullscreen Toggle Functionality
 fullscreenButton.addEventListener('click', () => {
-    // Check all possible fullscreen states
-    if (
-        !document.fullscreenElement &&
-        !document.mozFullScreenElement &&
-        !document.webkitFullscreenElement &&
-        !document.msFullscreenElement
-    ) {
-        // Request Fullscreen with vendor prefixes
+    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
         if (document.documentElement.requestFullscreen) {
             document.documentElement.requestFullscreen();
         } else if (document.documentElement.mozRequestFullScreen) {
@@ -634,7 +578,6 @@ fullscreenButton.addEventListener('click', () => {
         document.body.classList.add('fullscreen');
         fullscreenButton.textContent = '退出全屏';
     } else {
-        // Exit Fullscreen with vendor prefixes
         if (document.exitFullscreen) {
             document.exitFullscreen();
         } else if (document.mozCancelFullScreen) {
@@ -648,5 +591,3 @@ fullscreenButton.addEventListener('click', () => {
         fullscreenButton.textContent = '全屏';
     }
 });
-
-console.log('Fullscreen Button:', fullscreenButton);
