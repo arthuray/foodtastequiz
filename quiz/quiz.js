@@ -536,6 +536,10 @@ function closeModal() {
 
         document.getElementById("submit").textContent = "";
         document.getElementById("restart").style.display = "block"; // Show restart button
+
+        // Play finish.mp3 at the results page
+        let finishAudio = new Audio('soundfx/finish.mp3');
+        finishAudio.play();
     }
 }
 
