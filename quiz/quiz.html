@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>回味無窮</title>
     <link rel="stylesheet" href="./quiz.css">
+    <script src="./quiz.js" defer></script> <!-- Ensure the script is loaded after the HTML -->
 </head>
 <body>
     <!-- Add Navigation Bar -->
@@ -22,7 +23,12 @@
             </li>
         </ul>
     </nav>
-    <div class="quiz-container">
+    <div class="start-page">
+        <h1>歡迎來到食物知多少測驗</h1>
+        <button onclick="startQuiz()" id="startQuizButton">開始測驗</button>
+        <button onclick="testFood()">試食</button>
+    </div>
+    <div class="quiz-container" style="display: none;">
         <!-- Progress Bar -->
         <div id="progress-bar-container">
             <div id="progress-bar"></div>
@@ -38,6 +44,7 @@
         <div id="end"></div>
         <div id="restart" style="display: none;">
             <button onclick="restartQuiz()">重新開始</button> <!-- Chinese for "Restart" -->
+            <button onclick="testFood()">試食</button> <!-- Add Test Food button -->
         </div>
         <div id="qCorrect"></div>
     </div>
@@ -60,7 +67,17 @@
             <option value="300">300%</option>
         </select>
     </div>
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                document.getElementById('startQuizButton').click();
+            }
+        });
 
-    <script src="./quiz.js"></script>
+        function restartQuiz() {
+            document.querySelector('.start-page').style.display = 'block';
+            document.querySelector('.quiz-container').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

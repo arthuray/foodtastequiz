@@ -518,6 +518,17 @@ function restartQuiz() {
     document.getElementById("qCorrect").textContent = `第 ${currentQuestion + 1} 條題目，共 ${maxQuestion} 條。`;
     loadQuestion();
     document.getElementById("submit").innerHTML = '<button onclick="checkAnswer()">提交答案</button>';
+    document.querySelector('.start-page').style.display = 'block';
+    document.querySelector('.quiz-container').style.display = 'none';
+}
+
+function startQuiz() {
+    document.querySelector('.start-page').style.display = 'none';
+    document.querySelector('.quiz-container').style.display = 'block';
+}
+
+function testFood() {
+    window.open('https://example.com', '_blank'); // Replace with the actual URL
 }
 
 for (let i = 0; i < questions.length; i++) {
@@ -535,11 +546,17 @@ document.addEventListener('keydown', function(event) {
         const modal = document.getElementById("explanation-modal");
         if (modal.style.display === "block") {
             closeModal();
+        } else if (document.querySelector('.start-page').style.display !== 'none') {
+            startQuiz();
         } else {
             checkAnswer();
         }
     } else if (event.key === '0') {
+        document.querySelector('.start-page').style.display = 'block';
+        document.querySelector('.quiz-container').style.display = 'none';
         restartQuiz();
+    } else if (event.key === '9') {
+        testFood();
     }
 });
 
