@@ -43,7 +43,6 @@ let questions = [
         correctAnswer: "紫菜",
         explanation: "紫菜含有抗氧化劑和多種營養素，能增強免疫系統，有助於抵抗疾病。"
     },
-
     {
         question: "如要補充維他命C，哪種食物最適合？",
         options: [
@@ -76,39 +75,6 @@ let questions = [
         ],
         correctAnswer: "紫菜",
         explanation: "紫菜富含可溶性和不可溶性纖維，有助於調節血糖、降低膽固醇，並預防便秘。"
-    },
-    {
-        question: "如要改善睡眠，哪種食物最適合？",
-        options: [
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "蔬菜片", image: "./quiz_imgasset/蔬菜片.png" }
-        ],
-        correctAnswer: "龍眼乾",
-        explanation: "龍眼乾具有安神功效，能減少焦慮，促進安穩睡眠"
-    },
-    {
-        question: "如要增強免疫系統，哪種食物最適合？",
-        options: [
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "紫菜富含抗氧化劑（如維他命C和維生素E）、礦物質（如鋅和鐵）和多糖類物質，有助於增強免疫細胞的功能，提升身體的抗病能力。"
-    },
-    {
-        question: "哪種食物能增強免疫力,預防生病？",
-        options: [
-            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "提子乾",
-        explanation: "提子乾中含有豐富的抗氧化劑，可以增強免疫系統"
     },
     {
         question: "哪種食物可以作為健康的小吃，並且適合老年人？",
@@ -164,17 +130,6 @@ let questions = [
         ],
         correctAnswer: "紫菜",
         explanation: "無添加紫菜富含維他命K，有助於促進正常的血液凝固功能。"
-    },
-    {
-        question: "如要增強免疫系統，哪種食物最適合？",
-        options: [
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "紫菜富含抗氧化劑（如維他命C和維生素E）、礦物質（如鋅和鐵）和多糖類物質，有助於增強免疫細胞的功能，提升身體的抗病能力。"
     },
     {
         question: "哪種食物能提供多種微量元素，對老年人特別有益？",
@@ -352,17 +307,150 @@ let questions = [
         correctAnswer: "紫菜",
         explanation: "無添加紫菜含有鉀，有助於減少肌肉痙攣。"
     },
-     {
-            "question": "哪種零食有助於解決便秘問題？",
-            "options": [
-                { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
-                { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
-                { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" },
-                { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" }
-            ],
-            "correctAnswer": "C) 杏脯",
-            "explanation": "杏脯含有豐富的纖維素，能促進腸道蠕動，有助於改善便秘。"
-        },
+    
+    {
+        "question": "哪種零食有助於解決便秘問題？",
+        "options": [
+            { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" },
+            { "text": "蔬菜", "image": "./quiz_imgasset/蔬菜.png" }
+        ],
+        "correctAnswer": "杏脯",
+        "explanation": "杏脯含有豐富的纖維素，能促進腸道蠕動，有助於改善便秘。"
+    },
+    {
+        "question": "如果晚上頻繁上廁所，哪種零食較適合？",
+        "options": [
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" },
+            { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" },
+            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" }
+        ],
+        "correctAnswer": "紫菜",
+        "explanation": "無添加紫菜低鈉且富含礦物質，有助於維持水分平衡，減少夜間頻尿。"
+    },
+    {
+        "question": "哪種零食適合有心血管疾病風險人？",
+        "options": [
+            { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
+            { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" },
+            { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
+            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" }
+        ],
+        "correctAnswer": "混合果仁",
+        "explanation": "混合果仁含有不飽和脂肪酸，有助於心血管健康。"
+    },
+    {
+        "question": "哪種零食對於減少焦慮和壓力有幫助？",
+        "options": [
+            { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "蔬菜", "image": "./quiz_imgasset/蔬菜.png" },
+            { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" }
+        ],
+        "correctAnswer": "龍眼乾",
+        "explanation": "龍眼乾含有能幫助安神的成分，能減少焦慮。"
+    },
+    {
+        "question": "如果需要補充鐵質，哪種零食最合適？",
+        "options": [
+            { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
+            { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" },
+            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
+            { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" }
+        ],
+        "correctAnswer": "龍眼乾",
+        "explanation": "龍眼乾含有豐富的鐵質，有助於改善貧血問題。"
+    },
+    {
+        "question": "哪種零食有助於穩定血糖？",
+        "options": [
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "蔬菜", "image": "./quiz_imgasset/蔬菜.png" },
+            { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" },
+            { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" }
+        ],
+        "correctAnswer": "蔬菜",
+        "explanation": "蔬菜片低卡且富含纖維，有助於穩定血糖水平。"
+    },
+    {
+        "question": "如果想要控制體重，哪種零食最合適？",
+        "options": [
+            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
+            { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" },
+            { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
+            { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" }
+        ],
+        "correctAnswer": "蘋果片",
+        "explanation": "蘋果片低熱量且富含纖維，能幫助控制體重。"
+    },
+    {
+        "question": "哪種零食能幫助改善失眠問題？",
+        "options": [
+            { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
+            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" }
+        ],
+        "correctAnswer": "龍眼乾",
+        "explanation": "龍眼乾有助於安神，能改善睡眠質量。"
+    },
+    {
+        "question": "如果需要提高腦力，哪種零食最合適？",
+        "options": [
+            { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
+            { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
+            { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" },
+            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" }
+        ],
+        "correctAnswer": "混合果仁",
+        "explanation": "混合果仁中的 omega-3 脂肪酸有助於提高腦功能。"
+    },
+    {
+        "question": "如果常常出現水腫，哪種零食能幫助改善？",
+        "options": [
+            { "text": "菜片", "image": "./quiz_imgasset/蔬菜片.png" },
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
+            { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" }
+        ],
+        "correctAnswer": "蔬菜",
+        "explanation": "蔬菜片富含纖維且低鈉，有助於降低水腫。"
+    },
+    {
+        "question": "若想提升能量水平，應選擇哪種零食？",
+        "options": [
+            { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
+            { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" }
+        ],
+        "correctAnswer": "提子乾",
+        "explanation": "提子乾含有天然糖分，可以快速補充能量。"
+    },
+    {
+        "question": "對於需要改善腦血流的人，哪種零食是好選擇？",
+        "options": [
+            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
+            { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" }
+        ],
+        "correctAnswer": "混合果仁",
+        "explanation": "混合果仁中的脂肪酸能促進血液循環，有助於改善腦血流。"
+    },
+    {
+        "question": "若想提高抗氧化能力，應選擇哪種零食？",
+        "options": [
+            { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" },
+            { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
+            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+            { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" }
+        ],
+        "correctAnswer": "提子乾",
+        "explanation": "提子乾富含抗氧化劑，有助於提高身體的抗氧化能力。"
+    }
 ];
 
 questions.sort(() => Math.random() - 0.5);
