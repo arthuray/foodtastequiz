@@ -33,17 +33,6 @@ let questions = [
         explanation: "龍眼乾被認為有助於安神和改善睡眠，因為它含有一些能促進放鬆的成分。"
     },
     {
-        question: "哪一種食物的來源是乾燥的根莖類？",
-        options: [
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "蘿蔔乾", image: "./quiz_imgasset/蘿蔔乾.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "蘿蔔乾",
-        explanation: "蘿蔔乾是將蘿蔔這種根莖類蔬菜乾燥而成，常用於各種料理中，增加風味。"
-    },
-    {
         question: "如要增強免疫系統，哪種食物最適合？",
         options: [
             { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
@@ -56,7 +45,7 @@ let questions = [
     },
 
     {
-        question: "如要補充維生素C，哪種食物最適合？",
+        question: "如要補充維他命C，哪種食物最適合？",
         options: [
             { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
             { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
@@ -64,7 +53,7 @@ let questions = [
             { text: "紫菜", image: "./quiz_imgasset/紫菜.png" }
         ],
         correctAnswer: "杏脯",
-        explanation: "杏脯是杏子的乾燥版本，含有較高的維生素C，有助於增強免疫系統和促進皮膚健康。"
+        explanation: "杏脯是杏子的乾燥版本，含有較高的維他命C，有助於增強免疫系統和促進皮膚健康。"
     },
     {
         question: "哪一種食物最容易導致過敏反應，要小心食用？",
@@ -76,17 +65,6 @@ let questions = [
         ],
         correctAnswer: "軟芝士",
         explanation: "軟芝士可能含有乳製品成分，對於某些人來說，乳製品可能引起過敏反應。"
-    },
-    {
-        question: "哪一種食物是海藻類？有什麼好?",
-        options: [
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "蔬菜片", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "海藻富含維生素、礦物質、纖維、抗氧化劑和植物蛋白，有助於維持健康、增強免疫和減肥。"
     },
     {
         question: "哪種食物對腸道有益？",
@@ -119,7 +97,7 @@ let questions = [
             { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
         ],
         correctAnswer: "紫菜",
-        explanation: "紫菜富含抗氧化劑（如維生素C和維生素E）、礦物質（如鋅和鐵）和多糖類物質，有助於增強免疫細胞的功能，提升身體的抗病能力。"
+        explanation: "紫菜富含抗氧化劑（如維他命C和維生素E）、礦物質（如鋅和鐵）和多糖類物質，有助於增強免疫細胞的功能，提升身體的抗病能力。"
     },
     {
         question: "哪種食物能增強免疫力,預防生病？",
@@ -196,7 +174,7 @@ let questions = [
             { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
         ],
         correctAnswer: "紫菜",
-        explanation: "紫菜富含抗氧化劑（如維生素C和維生素E）、礦物質（如鋅和鐵）和多糖類物質，有助於增強免疫細胞的功能，提升身體的抗病能力。"
+        explanation: "紫菜富含抗氧化劑（如維他命C和維生素E）、礦物質（如鋅和鐵）和多糖類物質，有助於增強免疫細胞的功能，提升身體的抗病能力。"
     },
     {
         question: "哪種食物能提供多種微量元素，對老年人特別有益？",
@@ -232,18 +210,7 @@ let questions = [
         explanation: "蔬菜片通常富含維他命A，這對維護視力和眼睛健康可以提供很多幫助。"
     },
     {
-        question: "哪種食物能幫助維持腸道健康，並且富含益生元？",
-        options: [
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
-            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" },
-            { text: "蔬菜片", image: "./quiz_imgasset/蔬菜片.png" }
-        ],
-        correctAnswer: "消化餅",
-        explanation: "消化餅富含益生元，能促進腸道內有益菌的生長，維持腸道健康。"
-    },
-    {
-        question: "哪種食物能幫助改善心情，因其含有色氨酸？",
+        question: "哪種食物能幫助改善心情？",
         options: [
             { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
             { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
@@ -252,17 +219,6 @@ let questions = [
         ],
         correctAnswer: "混合果仁",
         explanation: "混合果仁含有色氨酸, 有效幫助您每天保持愉快的情緒。"
-    },
-    {
-        question: "哪種食物能提供豐富的纖維，有助於降低膽固醇？",
-        options: [
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "爆谷", image: "./quiz_imgasset/爆谷.png" },
-            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "爆谷",
-        explanation: "爆谷中的膳食纖維有助於降低血液中的膽固醇水平，促進心血管健康。"
     },
     {
         question: "哪種食物特別適合季節交替時食用？",
@@ -287,17 +243,6 @@ let questions = [
         explanation: "龍眼乾因其天然甜味，零添加物，能作為健康的甜點選擇。"
     },
     {
-        question: "哪種食物能幫助身體抵抗感染？",
-        options: [
-            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "無添加紫菜含有豐富的維他命C，有助於增強免疫系統。"
-    },
-    {
         question: "哪種食物有助於提升能量代謝？",
         options: [
             { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
@@ -309,7 +254,7 @@ let questions = [
         explanation: "混合果仁中的維他命B群有助於促進能量的生成和代謝。"
     },
     {
-        question: "哪種食物能有效緩解消化不良，富含天然酵素？",
+        question: "哪種食物能有效緩解消化不良？",
         options: [
             { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
             { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
@@ -407,6 +352,17 @@ let questions = [
         correctAnswer: "紫菜",
         explanation: "無添加紫菜含有鉀，有助於減少肌肉痙攣。"
     },
+     {
+            "question": "哪種零食有助於解決便秘問題？",
+            "options": [
+                { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
+                { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
+                { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" },
+                { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" }
+            ],
+            "correctAnswer": "C) 杏脯",
+            "explanation": "杏脯含有豐富的纖維素，能促進腸道蠕動，有助於改善便秘。"
+        },
 ];
 
 questions.sort(() => Math.random() - 0.5);
@@ -527,8 +483,10 @@ function startQuiz() {
     document.querySelector('.quiz-container').style.display = 'block';
 }
 
-function testFood(motor_id) {
-    spinMotor(motor_id); // Trigger the motor spin
+function testFood() {
+    const motors = ['motor1', 'motor2'];
+    const randomMotor = motors[Math.floor(Math.random() * motors.length)];
+    spinMotor(randomMotor); // Trigger a random motor spin
 }
 
 function spinMotor(motor_id) {
@@ -572,10 +530,8 @@ document.addEventListener('keydown', function(event) {
         document.querySelector('.start-page').style.display = 'block';
         document.querySelector('.quiz-container').style.display = 'none';
         restartQuiz();
-    } else if (event.key === '8') {
-        document.querySelector('button[onclick="testFood(\'motor1\')"]').click(); // Trigger motor 1
-    } else if (event.key === '9') {
-        document.querySelector('button[onclick="testFood(\'motor2\')"]').click(); // Trigger motor 2
+    } else if (event.key === '8' || event.key === '9') {
+        testFood(); // Trigger a random motor
     }
 });
 

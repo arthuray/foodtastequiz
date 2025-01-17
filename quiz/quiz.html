@@ -26,8 +26,7 @@
     <div class="start-page">
         <h1>歡迎來到食物知多少測驗</h1>
         <button onclick="startQuiz()" id="startQuizButton">開始測驗</button>
-        <button onclick="testFood('motor1')">試食甜食</button>
-        <button onclick="testFood('motor2')">試食鹹食</button>
+        <button onclick="testFood()">試食</button>
     </div>
     <div class="quiz-container" style="display: none;">
         <!-- Progress Bar -->
@@ -45,8 +44,7 @@
         <div id="end"></div>
         <div id="restart" style="display: none;">
             <button onclick="restartQuiz()">重新開始</button> <!-- Chinese for "Restart" -->
-            <button onclick="testFood('motor1')">試食甜食</button>
-            <button onclick="testFood('motor2')">試食鹹食</button> <!-- Add Test Food button -->
+            <button onclick="testFood()">試食</button>
         </div>
         <div id="qCorrect"></div>
     </div>
