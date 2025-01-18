@@ -55,17 +55,6 @@ let questions = [
         explanation: "軟芝士可能含有乳製品成分，對於某些人來說，乳製品可能引起過敏反應。"
     },
     {
-        question: "哪種食物可以作為健康的小吃，並且適合老年人？",
-        options: [
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "爆谷", image: "./quiz_imgasset/爆谷.png" },
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "爆谷",
-        explanation: "爆谷熱量低，味道好，適合老年人吃"
-    },
-    {
         question: "哪種食物中的天然糖分能提供持久能量？",
         options: [
             { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
