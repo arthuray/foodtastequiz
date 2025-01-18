@@ -344,7 +344,7 @@ let questions = [
     {
         "question": "如果常常出現水腫，哪種零食能幫助改善？",
         "options": [
-            { "text": "菜片", "image": "./quiz_imgasset/蔬菜片.png" },
+            { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
             { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" }
@@ -379,7 +379,7 @@ let questions = [
 questions.sort(() => Math.random() - 0.5);
 let currentQuestion = 0;
 let score = 0;
-const maxQuestion = 10;
+const maxQuestion = 6;
 
 document.getElementById("qCorrect").textContent = `第 ${currentQuestion + 1} 條題目，共 ${maxQuestion} 條。`;
 
