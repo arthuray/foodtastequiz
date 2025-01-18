@@ -33,17 +33,6 @@ let questions = [
         explanation: "龍眼乾被認為有助於安神和改善睡眠，因為它含有一些能促進放鬆的成分。"
     },
     {
-        question: "如要增強免疫系統，哪種食物最適合？",
-        options: [
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
-            { text: "軟芝士", image: "./quiz_imgasset/軟芝士.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "紫菜含有抗氧化劑和多種營養素，能增強免疫系統，有助於抵抗疾病。"
-    },
-    {
         question: "如要補充維他命C，哪種食物最適合？",
         options: [
             { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
@@ -64,17 +53,6 @@ let questions = [
         ],
         correctAnswer: "軟芝士",
         explanation: "軟芝士可能含有乳製品成分，對於某些人來說，乳製品可能引起過敏反應。"
-    },
-    {
-        question: "哪種食物對腸道有益？",
-        options: [
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" },
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "蔬菜片", image: "./quiz_imgasset/蔬菜片.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "紫菜富含可溶性和不可溶性纖維，有助於調節血糖、降低膽固醇，並預防便秘。"
     },
     {
         question: "哪種食物可以作為健康的小吃，並且適合老年人？",
@@ -121,29 +99,7 @@ let questions = [
         explanation: "提子乾中的抗氧化劑能保護皮膚，從而改善皮膚健康。"
     },
     {
-        question: "哪種食物對血液健康有益？",
-        options: [
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "無添加紫菜富含維他命K，有助於促進正常的血液凝固功能。"
-    },
-    {
-        question: "哪種食物能提供多種微量元素，對老年人特別有益？",
-        options: [
-            { text: "混合果仁", image: "./quiz_imgasset/混合果仁.png" },
-            { text: "提子乾", image: "./quiz_imgasset/提子乾.png" },
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "無添加紫菜富含多種微量營養素，對於老年人的整體健康非常有益。"
-    },
-    {
-        question: "哪種食物富含維他命C，有助於提高膠原蛋白合成？",
+        question: "哪種食物富含維他命C？",
         options: [
             { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
             { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
@@ -220,17 +176,6 @@ let questions = [
         explanation: "消化餅中的天然酵素能幫助改善消化不良的問題。"
     },
     {
-        question: "哪種食物有助於降低血壓？",
-        options: [
-            { text: "消化餅", image: "./quiz_imgasset/消化餅.png" },
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "爆谷", image: "./quiz_imgasset/爆谷.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "爆谷",
-        explanation: "爆谷中的膳食纖維有助於降低血壓，促進心血管健康。"
-    },
-    {
         question: "哪種食物能幫助提高記憶力？",
         options: [
             { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
@@ -273,17 +218,6 @@ let questions = [
         ],
         correctAnswer: "蘋果片",
         explanation: "蘋果片清脆，能幫助在炎熱的天氣中降溫。"
-    },
-    {
-        question: "哪種食物能幫助維持血糖穩定，因其含有低升糖指數？",
-        options: [
-            { text: "蘋果片", image: "./quiz_imgasset/蘋果片.png" },
-            { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" },
-            { text: "紫菜", image: "./quiz_imgasset/紫菜.png" },
-            { text: "杏脯", image: "./quiz_imgasset/杏脯.png" }
-        ],
-        correctAnswer: "紫菜",
-        explanation: "無添加紫菜的低升糖指數特性有助於維持血糖穩定。"
     },
     {
         question: " 哪種食物適合用作健康的早餐搭配？",
@@ -419,7 +353,7 @@ let questions = [
         "explanation": "蔬菜片富含纖維且低鈉，有助於降低水腫。"
     },
     {
-        "question": "若想提升能量水平，應選擇哪種零食？",
+        "question": "若想提升能量，應選擇哪種零食？",
         "options": [
             { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
@@ -428,17 +362,6 @@ let questions = [
         ],
         "correctAnswer": "提子乾",
         "explanation": "提子乾含有天然糖分，可以快速補充能量。"
-    },
-    {
-        "question": "對於需要改善腦血流的人，哪種零食是好選擇？",
-        "options": [
-            { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
-            { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
-            { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
-            { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" }
-        ],
-        "correctAnswer": "混合果仁",
-        "explanation": "混合果仁中的脂肪酸能促進血液循環，有助於改善腦血流。"
     },
     {
         "question": "若想提高抗氧化能力，應選擇哪種零食？",
