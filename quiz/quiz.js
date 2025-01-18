@@ -74,7 +74,7 @@ let questions = [
             { text: "消化餅", image: "./quiz_imgasset/消化餅.png" }
         ],
         correctAnswer: "蔬菜片",
-        explanation: "蔬菜片通常含有豐富的維他命A，這種維他命對於視網膜健康和夜間視力至關重要。"
+        explanation: "蔬菜片通常含有豐富的]維他命A，這種維他命對於視網膜健康和夜間視力至關重要。"
     },
     {
         question: "哪種食物能幫助改善皮膚健康？",
@@ -96,7 +96,7 @@ let questions = [
             { text: "龍眼乾", image: "./quiz_imgasset/龍眼乾.png" }
         ],
         correctAnswer: "蘋果片",
-        explanation: "維他命C對於膠原蛋白可以提供很多幫助，有助於維持皮膚的健康。"
+        explanation: "蘋果片. 維他命C對於膠原蛋白可以提供很多幫助，有助於維持皮膚的健康。"
     },
     {
         question: "哪種食物含有豐富的維他命A，有助於視力健康？",
