@@ -314,7 +314,7 @@ let questions = [
             { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" },
-            { "text": "蔬菜", "image": "./quiz_imgasset/蔬菜.png" }
+            { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" }
         ],
         "correctAnswer": "杏脯",
         "explanation": "杏脯含有豐富的纖維素，能促進腸道蠕動，有助於改善便秘。"
@@ -346,7 +346,7 @@ let questions = [
         "options": [
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
-            { "text": "蔬菜", "image": "./quiz_imgasset/蔬菜.png" },
+            { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" },
             { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" }
         ],
         "correctAnswer": "龍眼乾",
@@ -367,11 +367,11 @@ let questions = [
         "question": "哪種零食有助於穩定血糖？",
         "options": [
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
-            { "text": "蔬菜", "image": "./quiz_imgasset/蔬菜.png" },
+            { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" },
             { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" },
             { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" }
         ],
-        "correctAnswer": "蔬菜",
+        "correctAnswer": "蔬菜片",
         "explanation": "蔬菜片低卡且富含纖維，有助於穩定血糖水平。"
     },
     {
@@ -415,7 +415,7 @@ let questions = [
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
             { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" }
         ],
-        "correctAnswer": "蔬菜",
+        "correctAnswer": "蔬菜片",
         "explanation": "蔬菜片富含纖維且低鈉，有助於降低水腫。"
     },
     {
