@@ -243,136 +243,136 @@ let questions = [
     },
     
     {
-        "question": "哪種零食有助於解決便秘問題？",
-        "options": [
+        question: "哪種零食有助於解決便秘問題？",
+        options: [
             { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" },
             { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" }
         ],
-        "correctAnswer": "杏脯",
-        "explanation": "杏脯含有豐富的纖維素，能促進腸道蠕動，有助於改善便秘。"
+        correctAnswer: "杏脯",
+        explanation: "杏脯含有豐富的纖維素，能促進腸道蠕動，有助於改善便秘。"
     },
     {
-        "question": "如果晚上頻繁上廁所，哪種零食較適合？",
-        "options": [
+        question: "如果晚上頻繁上廁所，哪種零食較適合？",
+        options: [
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" },
             { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" },
             { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" }
         ],
-        "correctAnswer": "紫菜",
-        "explanation": "無添加紫菜低鈉且富含礦物質，有助於維持水分平衡，減少夜間頻尿。"
+        correctAnswer: "紫菜",
+        explanation: "無添加紫菜低鈉且富含礦物質，有助於維持水分平衡，減少夜間頻尿。"
     },
     {
-        "question": "哪種零食適合有心血管疾病風險人？",
-        "options": [
+        question: "哪種零食適合有心血管疾病風險人？",
+        options: [
             { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
             { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" },
             { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
             { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" }
         ],
-        "correctAnswer": "混合果仁",
-        "explanation": "混合果仁含有不飽和脂肪酸，有助於心血管健康。"
+        correctAnswer: "混合果仁",
+        explanation: "混合果仁含有不飽和脂肪酸，有助於心血管健康。"
     },
     {
-        "question": "哪種零食對於減少焦慮和壓力有幫助？",
-        "options": [
+        question: "哪種零食對於減少焦慮和壓力有幫助？",
+        options: [
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" },
             { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" }
         ],
-        "correctAnswer": "龍眼乾",
-        "explanation": "龍眼乾含有能幫助安神的成分，能減少焦慮。"
+        correctAnswer: "龍眼乾",
+        explanation: "龍眼乾含有能幫助安神的成分，能減少焦慮。"
     },
     {
-        "question": "如果需要補充鐵質，哪種零食最合適？",
-        "options": [
+        question: "如果需要補充鐵質，哪種零食最合適？",
+        options: [
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
             { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" },
             { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
             { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" }
         ],
-        "correctAnswer": "龍眼乾",
-        "explanation": "龍眼乾含有豐富的鐵質，有助於改善貧血問題。"
+        correctAnswer: "龍眼乾",
+        explanation: "龍眼乾含有豐富的鐵質，有助於改善貧血問題。"
     },
     {
-        "question": "哪種零食有助於穩定血糖？",
-        "options": [
+        question: "哪種零食有助於穩定血糖？",
+        options: [
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" },
             { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" },
             { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" }
         ],
-        "correctAnswer": "蔬菜片",
-        "explanation": "蔬菜片低卡且富含纖維，有助於穩定血糖水平。"
+        correctAnswer: "蔬菜片",
+        explanation: "蔬菜片低卡且富含纖維，有助於穩定血糖水平。"
     },
     {
-        "question": "如果想要控制體重，哪種零食最合適？",
-        "options": [
+        question: "如果想要控制體重，哪種零食最合適？",
+        options: [
             { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
             { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" },
             { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
             { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" }
         ],
-        "correctAnswer": "蘋果片",
-        "explanation": "蘋果片低熱量且富含纖維，能幫助控制體重。"
+        correctAnswer: "蘋果片",
+        explanation: "蘋果片低熱量且富含纖維，能幫助控制體重。"
     },
     {
-        "question": "哪種零食能幫助改善失眠問題？",
-        "options": [
+        question: "哪種零食能幫助改善失眠問題？",
+        options: [
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
             { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" }
         ],
-        "correctAnswer": "龍眼乾",
-        "explanation": "龍眼乾有助於安神，能改善睡眠質量。"
+        correctAnswer: "龍眼乾",
+        explanation: "龍眼乾有助於安神，能改善睡眠質量。"
     },
     {
-        "question": "如果需要提高腦力，哪種零食最合適？",
-        "options": [
+        question: "如果需要提高腦力，哪種零食最合適？",
+        options: [
             { "text": "混合果仁", "image": "./quiz_imgasset/混合果仁.png" },
             { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
             { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" },
             { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" }
         ],
-        "correctAnswer": "混合果仁",
-        "explanation": "混合果仁中的 omega-3 脂肪酸有助於提高腦功能。"
+        correctAnswer: "混合果仁",
+        explanation: "混合果仁中的 omega-3 脂肪酸有助於提高腦功能。"
     },
     {
-        "question": "如果常常出現水腫，哪種零食能幫助改善？",
-        "options": [
+        question: "如果常常出現水腫，哪種零食能幫助改善？",
+        options: [
             { "text": "蔬菜片", "image": "./quiz_imgasset/蔬菜片.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
             { "text": "杏脯", "image": "./quiz_imgasset/杏脯.png" }
         ],
-        "correctAnswer": "蔬菜片",
-        "explanation": "蔬菜片富含纖維且低鈉，有助於降低水腫。"
+        correctAnswer: "蔬菜片",
+        explanation: "蔬菜片富含纖維且低鈉，有助於降低水腫。"
     },
     {
-        "question": "若想提升能量，應選擇哪種零食？",
-        "options": [
+        question: "若想提升能量，應選擇哪種零食？",
+        options: [
             { "text": "蘋果片", "image": "./quiz_imgasset/蘋果片.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "爆谷", "image": "./quiz_imgasset/爆谷.png" },
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" }
         ],
-        "correctAnswer": "提子乾",
-        "explanation": "提子乾含有天然糖分，可以快速補充能量。"
+        correctAnswer: "提子乾",
+        explanation: "提子乾含有天然糖分，可以快速補充能量。"
     },
     {
-        "question": "若想提高抗氧化能力，應選擇哪種零食？",
-        "options": [
+        question: "若想提高抗氧化能力，應選擇哪種零食？",
+        options: [
             { "text": "紫菜", "image": "./quiz_imgasset/紫菜.png" },
             { "text": "龍眼乾", "image": "./quiz_imgasset/龍眼乾.png" },
             { "text": "提子乾", "image": "./quiz_imgasset/提子乾.png" },
             { "text": "消化餅", "image": "./quiz_imgasset/消化餅.png" }
         ],
-        "correctAnswer": "提子乾",
-        "explanation": "提子乾富含抗氧化劑，有助於提高身體的抗氧化能力。"
+        correctAnswer: "提子乾",
+        explanation: "提子乾富含抗氧化劑，有助於提高身體的抗氧化能力。"
     }
 ];
 
@@ -388,8 +388,8 @@ function sort(a) {
 }
 
 function loadQuestion() {
-    const questionElement = document.getElementById("question");
-    const optionsElement = document.getElementById("options");
+    const questionElement = document.getElementById(question);
+    const optionsElement = document.getElementById(options);
     const progressBar = document.getElementById("progress-bar");
 
     questionElement.textContent = questions[currentQuestion].question;
@@ -459,8 +459,8 @@ function closeModal() {
         loadQuestion();
         document.getElementById("qCorrect").textContent = `第 ${currentQuestion + 1} 條題目，共 ${maxQuestion} 條。`;
     } else {
-        document.getElementById("question").textContent = "";
-        document.getElementById("options").textContent = "";
+        document.getElementById(question).textContent = "";
+        document.getElementById(options).textContent = "";
         document.getElementById("end").textContent = `遊戲結束！分數：${score}/${maxQuestion}`;
         document.getElementById("qCorrect").textContent = "";
         document.getElementById("progress-bar").style.width = `100%`;
