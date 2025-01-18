@@ -388,8 +388,8 @@ function sort(a) {
 }
 
 function loadQuestion() {
-    const questionElement = document.getElementById(question);
-    const optionsElement = document.getElementById(options);
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("options");
     const progressBar = document.getElementById("progress-bar");
 
     questionElement.textContent = questions[currentQuestion].question;
@@ -459,8 +459,8 @@ function closeModal() {
         loadQuestion();
         document.getElementById("qCorrect").textContent = `第 ${currentQuestion + 1} 條題目，共 ${maxQuestion} 條。`;
     } else {
-        document.getElementById(question).textContent = "";
-        document.getElementById(options).textContent = "";
+        document.getElementById("question").textContent = "";
+        document.getElementById("options").textContent = "";
         document.getElementById("end").textContent = `遊戲結束！分數：${score}/${maxQuestion}`;
         document.getElementById("qCorrect").textContent = "";
         document.getElementById("progress-bar").style.width = `100%`;
