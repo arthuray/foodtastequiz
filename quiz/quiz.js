@@ -501,7 +501,7 @@ function testFood() {
 }
 
 function spinMotor(motor_id) {
-    fetch('http://192.168.17.91:5000/dispense', {
+    fetch('http://172.16.5.207:5000/dispense', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
